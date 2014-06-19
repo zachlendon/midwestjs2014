@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
+var RNR = require('react-nested-router');
+var Router = RNR.Router;
+var Route = RNR.Route;
 
 var App = require('./components/app');
 var Index = require('./components/index');
