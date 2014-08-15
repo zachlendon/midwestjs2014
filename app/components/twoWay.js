@@ -7,8 +7,9 @@ var TwoWay = module.exports = React.createClass({
   },
   render: function() {
     return (
-    <div id="jumboTwoWay" className="jumbotron"><h2>Hello <input type="text" valueLink={this.linkState('value')} /></h2>
-    <p>{this.state.value}</p>
+    <div id="jumboTwoWay" className="jumbotron">
+      <h2>Hello <input type="text" valueLink={this.linkState('value')} /></h2>
+      <p>{this.state.value}</p>
     </div>
     )
   }
