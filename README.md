@@ -22,6 +22,6 @@ This app is for demonstration purposes in that it attempts to show examples of h
 There are 3 sets of demos:
 
 1. http://localhost:3000 - which is thereact-router configured set of examples/demos 
-2. http://localhost:3000/spped.html - which is a combined performance and Backbone integration example
+2. http://localhost:3000/speed.html - which is a combined performance and Backbone integration example
 3. http://localhost:3000/ngReact.html and http://localhost:3000/ngReactLocal.html - which are ngReactGrid-based examples (to demo Angular integration) - one for "local" json and one retrieved from the server.  The grid is currently  working "more correctly" for the local example, as the "remote" example is more for demo purposes of just getting the JSON from the server.  Additional javascript on both the client and server ends to handle pagination and other table features would be required to make the grid fully functional for the remote example.
 	
