@@ -1,15 +1,15 @@
 {
   "name": "midwestjs-demos",
   "version": "0.0.0",
-  "description": "MidwestJS 2014 ReactJS Talk Demos"
+  "description": "MidwestJS 2014 ReactJS Talk Demos",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "private": true,
   "repository": {
-  "type": "git",
-  "url": "git://github.com/zachlendon/midwestjs2014.git"
+    "type": "git",
+    "url": "git://github.com/zachlendon/midwestjs2014.git"
   }
   "license": "MIT",
   "dependencies": {
