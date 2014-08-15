@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/zachlendon/midwestjs2014.git"
-  }
+  },
   "license": "MIT",
   "dependencies": {
     "react": "0.11.0",
