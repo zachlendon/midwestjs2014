@@ -13,7 +13,6 @@
       this.set( { highlighted: true } );
     },
 
-
     initialize: function() {
       var _self = this;
       //not safe as production philosophy, but for a demo, sure
