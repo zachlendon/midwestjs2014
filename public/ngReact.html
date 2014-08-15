@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MidwestJS 2014 | NGReact | "Remote" Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/lib/bootstrap-3.0.3.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/ngReactGrid.css">
+  <body ng-app="CompanyApp">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script src="js/react.min.js" type="text/javascript" ></script>
+  <script src="js/ngReactGrid.min.js" type="text/javascript" ></script>
+  <link rel="stylesheet" href="/styles.css"/>
+
+    <section ng-controller="CompanyController">
+
+      <section>
+        <div class="table-responsive">
+            <ng-react-grid grid="grid"></ng-react-grid>
+        </div>
+      </section>
+
+    </section>
+
+    <script>
+
+      angular.module("CompanyApp", ['ngReactGrid'])
+        .controller("CompanyController", function($scope, $http, $timeout) {
+                    $scope.grid = {
+                        data: [],
+                        sort: false,
+                        columnDefs: [
+                        {
+                            field: "company",
+                            displayName: "Company"
+                        },
+                        {
+                            field: "author",
+                            displayName: "Author"
+                        },
+                        {
+                            field: "slogan",
+                            displayName: "Slogan"
+                        }
+                        ],
+                       localMode: false,
+                       getData: function() {
+                            var grid = this;
+                            $timeout(function() {
+                              console.log("getting data");
+                              var responsePromise = $http.get("http://localhost:4000/companies");
+                              responsePromise.success(function(data, status, headers, config) {
+                                  $scope.grid.data = data;
+                                  $scope.grid.totalCount = data.length;
+                              });
+                              responsePromise.error(function(data, status, headers, config) {
+                                alert("Companies AJAX fetch failed - damn it!!");
+                              });
+                            }, 5000);
+                      }
+          }
+        });
+    </script>
+  </body>
+</html>

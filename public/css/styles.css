@@ -1,0 +1,13 @@
+a.active {
+  color: green;
+}
+.square {
+    border: 1px solid #ccc;
+    width: 10%;
+    margin: 1%;
+    display: inline-block;
+    height: 72px;
+}
+.highlighted {
+    background: #8e91eb;
+}
